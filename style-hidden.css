@@ -1,0 +1,27 @@
+.instrucciones{
+    width: 100%;
+    height:120%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    padding-top: 80px;
+    z-index: 1000;
+}
+.ayuda{
+    background-color: #059;
+    width: 70%;
+    position: relative;
+    padding: 50px;
+    margin: auto;
+}
+.cerrar{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top:0;
+    right: 50px;
+}
+.botonA{
+    margin-bottom: 20px;
+}
