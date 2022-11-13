@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costo minimo</title>
+    <link rel="stylesheet" href="style-mcm.css"> <!--Estilos en general-->
+    <link rel="stylesheet" href="style-hidden.css"> <!--Estilos del hidden div y sus botones-->
+</head>
+<body>
+    <h1>Metodo de Trasporte</h1>
+    <h2>Costo Mínimo</h2>
+    <p>Esta es una calculadora de costos de trasporte por el metodo de Costo Mínimo.
+        Para utilizarla, ingrese los valores de los costes de envio donde se señala, asi mismo como
+        la oferta de cada planta de distribucion (oferta) y la nececidad de cada punto de venta (demanda).<br><br>
+        ¡Importante!:  la suma de las oferta y las demandas debe ser igual.
+    </p>
+
+    <button class="botonA" onclick="abrir()">Ayuda</button>    
+    <div class="instrucciones">
+        <button class="cerrar" onclick="cerrar()">X</button>
+        <p class="ayuda">Los metodos de trasporte nos ayudan a calcular costos asociados a la
+        movilizacion de mercancia desde las plantas de produccion hasta los puntos de
+        ventas.<br>
+        Para que el metodo pueda ser aplicado es necesario que a suma de la oferta total y
+        la demanda sea igua, si este no es el caso, puede agregar una oferta o demanda con un costo cero
+        asociado.<br>
+        Pasos:<br>
+        1. Agregar los costo a la tabla, estos costos son el capital necesario para mover una unidad de producto desde la planta al punto de venta.<br>
+        2. La oferta es la capacidad de producion de la planta (tener en cuenta que esto puede basarse en un plan mensual, trimestal, etc, y este periodo se debe mantener en las demanda).<br>
+        3. las demandas hacen referencia a la nececidad de productos de un punto de venta o distribucion en el periodo establecido.<br>
+        4. Al tener los dato completos, se procede a darle click al boton de "Calcular".<br>
+        Nota: si quiere borrar la tabla por completo, utilice el boton "Reset".<br>
+        Ademas, todavia esta en desarrollo el mostrar la cantidad de productos y el costo, por ahora solo el total es mostrado.
+        </p>
+    </div>
+    </div>
+    <div id="container">
+        <div class="vacia head">O</div>
+        <div class="d1 head">D1</div>
+        <div class="d2 head">D2</div>
+        <div class="d3 head">D3</div>
+        <div class="dtotal head">Dt</div>
+        <div class="o1 head">O1</div>
+        <div class="o2 head">O2</div>
+        <div class="o3 head">O3</div>
+        <div class="ototal head">Ot</div>
+        <input class="input c1" placeholder="Costo 1">
+        <input class="input c2" placeholder="Costo 2">
+        <input class="input c3" placeholder="Costo 3">
+        <input class="input c4" placeholder="Costo 4">
+        <input class="input c5" placeholder="Costo 5">
+        <input class="input c6" placeholder="Costo 6">
+        <input class="input c7" placeholder="Costo 7">
+        <input class="input c8" placeholder="Costo 8">
+        <input class="input c9" placeholder="Costo 9">
+        <input class="input oferta1" placeholder="Oferta 1">
+        <input class="input oferta2" placeholder="Oferta 2">
+        <input class="input oferta3" placeholder="Oferta 3">
+        <input class="input demanda1" placeholder="Demanda 1">
+        <input class="input demanda2" placeholder="Demanda 2">
+        <input class="input demanda3" placeholder="Demanda 3">
+        <input class="input total" placeholder="Total">
+    </div>
+    <b>Resultado: 
+        <span class="calculo"></span><br><br>
+        Precio: 
+        <span class="precio"></span>
+    </b>
+    
+    <div class="botones">
+        <div class="resultado">
+            <button class="botonG" onclick="MCM()">Calcular</button>
+        </div>
+    
+        <div class="reset">
+            <button class="botonR" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <footer>
+        <span>Este es un proyecto diseñado y desarollado por Jairo Morales López.<br>
+            Copyrights 2022.
+        </span>
+    </footer>
+    <script src="MCM.js"></script>
+    <script src="botones.js"></script>
+</body>
+</html>
